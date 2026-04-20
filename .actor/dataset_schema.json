@@ -6,55 +6,60 @@
             "title": "Doctors",
             "transformation": {
                 "fields": [
-                    "sourceSite",
-                    "sourceDoctorId",
-                    "sourceUrl",
-                    "fullName",
-                    "professionalTitle",
-                    "workplaceName",
-                    "consultationFee.rawText",
-                    "yearsOfExperience",
-                    "crawledAt"
+                    "normalized.sourceSite",
+                    "normalized.sourceDoctorId",
+                    "normalized.sourceUrl",
+                    "normalized.fullName",
+                    "normalized.professionalTitle",
+                    "normalized.workplaceName",
+                    "normalized.consultationFee.rawText",
+                    "normalized.yearsOfExperience",
+                    "normalized.crawledAt",
+                    "raw.rawPayloadKey"
                 ]
             },
             "display": {
                 "component": "table",
                 "properties": {
-                    "sourceSite": {
+                    "normalized.sourceSite": {
                         "label": "Source Site",
                         "format": "text"
                     },
-                    "sourceDoctorId": {
+                    "normalized.sourceDoctorId": {
                         "label": "Source Doctor ID",
                         "format": "text"
                     },
-                    "sourceUrl": {
+                    "normalized.sourceUrl": {
                         "label": "Source URL",
                         "format": "link"
                     },
-                    "fullName": {
+                    "normalized.fullName": {
                         "label": "Doctor Name",
                         "format": "text"
                     },
-                    "professionalTitle": {
+                    "normalized.professionalTitle": {
                         "label": "Professional Title",
                         "format": "text"
                     },
-                    "workplaceName": {
+                    "normalized.workplaceName": {
                         "label": "Workplace",
                         "format": "text"
                     },
-                    "consultationFee.rawText": {
+                    "normalized.consultationFee.rawText": {
                         "label": "Consultation Fee",
                         "format": "text"
                     },
-                    "yearsOfExperience": {
+                    "normalized.yearsOfExperience": {
                         "label": "Years Of Experience",
                         "format": "number"
                     },
-                    "crawledAt": {
+                    "normalized.crawledAt": {
                         "label": "Crawled At",
                         "format": "date"
+                    },
+                    "raw.rawPayloadKey": {
+                        "label": "Raw Payload Key",
+                        "format": "text"
                     }
                 }
             }
