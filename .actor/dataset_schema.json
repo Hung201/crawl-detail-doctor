@@ -1,0 +1,63 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Doctors",
+            "transformation": {
+                "fields": [
+                    "sourceSite",
+                    "sourceDoctorId",
+                    "sourceUrl",
+                    "fullName",
+                    "professionalTitle",
+                    "workplaceName",
+                    "consultationFee.rawText",
+                    "yearsOfExperience",
+                    "crawledAt"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "sourceSite": {
+                        "label": "Source Site",
+                        "format": "text"
+                    },
+                    "sourceDoctorId": {
+                        "label": "Source Doctor ID",
+                        "format": "text"
+                    },
+                    "sourceUrl": {
+                        "label": "Source URL",
+                        "format": "link"
+                    },
+                    "fullName": {
+                        "label": "Doctor Name",
+                        "format": "text"
+                    },
+                    "professionalTitle": {
+                        "label": "Professional Title",
+                        "format": "text"
+                    },
+                    "workplaceName": {
+                        "label": "Workplace",
+                        "format": "text"
+                    },
+                    "consultationFee.rawText": {
+                        "label": "Consultation Fee",
+                        "format": "text"
+                    },
+                    "yearsOfExperience": {
+                        "label": "Years Of Experience",
+                        "format": "number"
+                    },
+                    "crawledAt": {
+                        "label": "Crawled At",
+                        "format": "date"
+                    }
+                }
+            }
+        }
+    }
+}

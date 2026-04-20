@@ -1,0 +1,39 @@
+{
+    "title": "BookingCare Doctor Crawler Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "Danh sách URL để bắt đầu crawl (trang listing hoặc trang bác sĩ).",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://bookingcare.vn/"
+                }
+            ]
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Số request tối đa cho một lần chạy crawler.",
+            "default": 200,
+            "minimum": 1
+        },
+        "maxDoctorProfiles": {
+            "title": "Max Doctor Profiles",
+            "type": "integer",
+            "description": "Số hồ sơ bác sĩ tối đa sẽ lưu ra dataset trong một lần chạy.",
+            "default": 100,
+            "minimum": 1
+        },
+        "sourceSite": {
+            "title": "Source Site",
+            "type": "string",
+            "description": "Nguồn crawl để đồng bộ về hệ thống backend.",
+            "default": "bookingcare"
+        }
+    },
+    "required": ["startUrls"]
+}

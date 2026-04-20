@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "my-actor-2",
+    "title": "Project Cheerio Crawler Javascript",
+    "description": "Crawlee and Cheerio project in javascript.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "js-crawlee-cheerio",
+        "generatedBy": "Codex 5.3"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}
