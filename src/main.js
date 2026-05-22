@@ -1,4 +1,6 @@
 import { createHash } from 'node:crypto';
+import { writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
 import { Actor } from 'apify';
 import { CheerioCrawler, log } from 'crawlee';
 
@@ -462,5 +464,10 @@ const crawler = new CheerioCrawler({
 });
 
 await crawler.run(seedUrls);
+
+const { items } = await Actor.openDataset().then((dataset) => dataset.getData());
+const dataJsonPath = join(process.cwd(), 'data.json');
+await writeFile(dataJsonPath, JSON.stringify(items, null, 2), 'utf8');
+log.info(`Đã ghi ${items.length} bản ghi vào ${dataJsonPath}`);
 
 await Actor.exit();
